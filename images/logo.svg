@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    
+  </defs>
+  <rect x="1" y="2" width="44" height="44" rx="10" fill="url(#g)"/>
+  
+  <rect x="5" y="18" width="30" height="15" rx="3.5" fill="none" stroke="white" stroke-width="2" opacity="0.85"/>
+  <rect x="35" y="22" width="5" height="7" rx="2" fill="white" opacity="0.75"/>
+  <rect x="7" y="20.5" width="14" height="10" rx="2" fill="white" opacity="0.3"/>
+  <path d="M23,8 L15,28 L22,28 L18,46 L32,24 L25,24 Z" fill="#fbbf24" opacity="0.92"/>
+  <text x="55" y="24" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1e3a5f" dominant-baseline="central" letter-spacing="-0.3">Batteriespeicher</text>
+</svg>
