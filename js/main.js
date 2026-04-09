@@ -179,4 +179,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('scroll', highlightNav, { passive: true });
 
+    // ---------- Hero stats count-up ----------
+    const statNums = document.querySelectorAll('.hero-stat-number[data-count]');
+    statNums.forEach(el => {
+        const target = parseInt(el.dataset.count, 10);
+        if (isNaN(target)) return;
+        const suffix = el.dataset.suffix || '';
+        const duration = 1600;
+        const start = performance.now() + 300;
+        function tick(now) {
+            const t = Math.min(1, Math.max(0, (now - start) / duration));
+            const eased = 1 - Math.pow(1 - t, 3);
+            el.textContent = Math.floor(eased * target) + (t === 1 ? suffix : (suffix && t > 0.95 ? suffix : ''));
+            if (t < 1) requestAnimationFrame(tick);
+            else el.textContent = target + suffix;
+        }
+        requestAnimationFrame(tick);
+    });
+
 });
