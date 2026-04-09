@@ -355,22 +355,31 @@ section { padding: 5rem 0; }
 }
 
 .hero h1 {
-    color: var(--white);
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -.022em;
     margin-bottom: 1.5rem;
-    letter-spacing: -.02em;
+    text-shadow: none;
+    filter: none;
 }
 .hero h1 .gradient-text {
-    background: linear-gradient(135deg, var(--primary-light), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #ffffff;
+    background: none;
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: #ffffff;
+    background-clip: initial;
+    text-shadow: none;
+    filter: none;
 }
 
 .hero p {
-    color: var(--light-400);
+    color: #e2e8f0;
     font-size: 1.2rem;
+    font-weight: 500;
     margin-bottom: 2rem;
-    max-width: 600px;
+    max-width: 620px;
+    text-shadow: none;
 }
 
 .hero-buttons {
@@ -461,14 +470,47 @@ section { padding: 5rem 0; }
 .product-card-icon {
     width: 64px;
     height: 64px;
-    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
     margin-bottom: 1rem;
     position: relative;
     z-index: 1;
+    background: transparent !important;
+}
+.product-card-icon svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    filter: drop-shadow(0 4px 14px rgba(6,182,212,0.35));
+    transition: transform .4s ease;
+}
+.product-card:hover .product-card-icon svg { transform: scale(1.08) rotate(-3deg); }
+.product-card-icon svg .pulse {
+    transform-origin: center;
+    animation: iconPulse 2.4s ease-in-out infinite;
+}
+.product-card-icon svg .spark {
+    transform-origin: center;
+    animation: iconSpark 2s ease-in-out infinite;
+}
+.product-card-icon svg .charge {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 60;
+    animation: iconCharge 3s ease-in-out infinite;
+}
+@keyframes iconPulse {
+    0%, 100% { opacity: .55; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+}
+@keyframes iconSpark {
+    0%, 100% { opacity: .7; }
+    50% { opacity: 1; filter: drop-shadow(0 0 6px #fbbf24); }
+}
+@keyframes iconCharge {
+    0% { stroke-dashoffset: 60; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -60; }
 }
 
 .product-card-header h3 {
