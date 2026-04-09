@@ -227,6 +227,11 @@ section { padding: 5rem 0; }
     display: flex;
     align-items: center;
     gap: .5rem;
+    margin-left: -1.5rem;
+}
+.footer-brand .nav-logo { margin-left: -0.5rem; }
+@media (max-width: 768px) {
+    .nav-logo { margin-left: -0.5rem; }
 }
 .nav-logo:hover { color: var(--white); }
 .nav-logo .logo-icon {
@@ -1128,6 +1133,25 @@ section { padding: 5rem 0; }
     font-size: .9rem;
     line-height: 1.7;
     margin-bottom: 1.5rem;
+}
+.footer-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .85rem 1.4rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: #fff !important;
+    font-weight: 600;
+    font-size: .92rem;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(124,58,237,0.35);
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+}
+.footer-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(124,58,237,0.5);
+    filter: brightness(1.1);
 }
 
 
